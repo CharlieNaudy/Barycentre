@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-	has_many :meeting_users
-	has_many :meetings, through => :meeting_users
+	has_many :users_to_meetings
+	has_many :meetings, :through => :users_to_meetings
 end
