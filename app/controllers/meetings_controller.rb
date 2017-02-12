@@ -1,6 +1,6 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :update, :destroy]
-  skip_before_action :verify_authenticity_token
+  #skip_before_action :verify_authenticity_token
 
   # GET /meetings
   def index
