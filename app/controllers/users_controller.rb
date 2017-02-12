@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
+  skip_before_action :verify_authenticity_token
+
+  # POST /login
+  def login
+    @user = User.where("login" = params[:email])
+    if params[:password] = @user.password
+      render json: => {:token => @user.fetch_token}
+  end
 
   # GET /users
   def index
