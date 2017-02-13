@@ -7,5 +7,6 @@ User.create(
   login: "Baryonaute",
   firstName: "Paul",
   lastName: "Dewost",
-  address: "7, avenue du Maréchal de Lattre de Tassigny, 92100, Boulogne-Billancourt"
+  address: "7, avenue du Maréchal de Lattre de Tassigny, 92100, Boulogne-Billancourt",
+  password: "test"
 )

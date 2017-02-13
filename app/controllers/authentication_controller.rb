@@ -1,7 +1,7 @@
 class AuthenticationController < ApplicationController
   def create
     if user.valid_password? params[:password]
-      render json: { token: user.fetch_auth_token! }, status: :ok
+      render json: { token: user.fetch_token! }, status: :ok
     else
       render json: {}, status: :unauthorized
     end
