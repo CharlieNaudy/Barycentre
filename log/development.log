@@ -1609,3 +1609,103 @@ Processing by UsersController#login as */*
 Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 1.8ms)
 
 
+Started POST "/users/login" for 127.0.0.1 at 2017-02-13 18:37:49 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-13 18:37:53 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "Gx56ALW00DIIFXMmxI39ZjTXg7A2JDvwyNKTDN3d1wLX3GOoHTUxLXV39ENwojFZ5jQ="], ["updated_at", 2017-02-13 17:37:53 UTC], ["id", 1]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-13 18:37:54 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "6a1HvAJX2wTnivYGuEab/RAWvf9vJsB0vHUbtns/xhkchbbAEMikxH3Zy5EdcgI7aKg="], ["updated_at", 2017-02-13 17:37:54 UTC], ["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-13 18:37:55 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "H1stKfywAaQ3ANAdf8+p2m3GG3zYmSai6v8G44OVm3kwX39EYrBL7HyZdC1cnzONh44="], ["updated_at", 2017-02-13 17:37:55 UTC], ["id", 1]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 13ms (Views: 0.3ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-13 18:37:56 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login" = ? LIMIT ?[0m  [["login", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "gU+XF77LizJWKYbvKSOaPXCYEjP9I52in5bR/X6onsXzqhkj5Z9cYqUhyCGXD6L232o="], ["updated_at", 2017-02-13 17:37:56 UTC], ["id", 1]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2017-02-13 18:57:21 +0100
+Processing by UsersController#create as */*
+  Parameters: {"firstName"=>"Charlie", "lastName"=>"Naudy", "address"=>"119 B Rue de Paris, 92100", "email"=>"charlie.obiwan@yahoo.fr", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]", "firstName"=>"Charlie", "lastName"=>"Naudy", "address"=>"119 B Rue de Paris, 92100"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("password", "firstName", "lastName", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["password", "test"], ["firstName", "Charlie"], ["lastName", "Naudy"], ["address", "119 B Rue de Paris, 92100"], ["created_at", 2017-02-13 17:57:21 UTC], ["updated_at", 2017-02-13 17:57:21 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2017-02-13 17:57:21 UTC], ["token", "O/Yz68evMSn+QBzt/g5o3g41HD3EAFrmk50cy2jRxcCH6yvRMlQOe7M5AhRU5tDYjHM="], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2017-02-13 18:57:25 +0100
+Processing by UsersController#create as */*
+  Parameters: {"firstName"=>"Charlie", "lastName"=>"Naudy", "address"=>"119 B Rue de Paris, 92100", "email"=>"charlie.obiwan@yahoo.fr", "password"=>"[FILTERED]", "user"=>{"password"=>"[FILTERED]", "firstName"=>"Charlie", "lastName"=>"Naudy", "address"=>"119 B Rue de Paris, 92100"}}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("password", "firstName", "lastName", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["password", "test"], ["firstName", "Charlie"], ["lastName", "Naudy"], ["address", "119 B Rue de Paris, 92100"], ["created_at", 2017-02-13 17:57:25 UTC], ["updated_at", 2017-02-13 17:57:25 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2017-02-13 17:57:25 UTC], ["token", "9/FfeEMK9oFgNGzcKLK1knopPVKoM8f1w8Er7tJIqgEqoz8aiUzpaLkch/zFbeubb4Q="], ["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-02-13 18:57:42 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2017-02-13 18:58:24 +0100
+Processing by UsersController#create as */*
+  Parameters: {"firstName"=>"Charlie", "lastName"=>"Naudy", "address"=>"119 B Rue de Paris, 92100", "login"=>"charlie.obiwan@yahoo.fr", "password"=>"[FILTERED]", "user"=>{"login"=>"charlie.obiwan@yahoo.fr", "password"=>"[FILTERED]", "firstName"=>"Charlie", "lastName"=>"Naudy", "address"=>"119 B Rue de Paris, 92100"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("login", "password", "firstName", "lastName", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["login", "charlie.obiwan@yahoo.fr"], ["password", "test"], ["firstName", "Charlie"], ["lastName", "Naudy"], ["address", "119 B Rue de Paris, 92100"], ["created_at", 2017-02-13 17:58:24 UTC], ["updated_at", 2017-02-13 17:58:24 UTC]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "token" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2017-02-13 17:58:24 UTC], ["token", "phaL8vdjyQAvcRx28QgKMymxozWJCldz6qoNbA7TMpA4E+k/XymLVEDDYEjNK1PNQaA="], ["id", 4]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-02-13 18:58:28 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
