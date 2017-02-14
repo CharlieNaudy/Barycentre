@@ -10,3 +10,9 @@ User.create(
   address: "7, avenue du Maréchal de Lattre de Tassigny, 92100, Boulogne-Billancourt",
   password: "test"
 )
+
+Friend.create(
+	name: "Aymon",
+	address: "60 Rue du Chemin Vert, 92100",
+	user_id: 1
+)
