@@ -4,7 +4,7 @@ Meeting.create(
 )
 
 User.create(
-  login: "Baryonaute",
+  email: "Baryonaute",
   firstName: "Paul",
   lastName: "Dewost",
   address: "7, avenue du Maréchal de Lattre de Tassigny, 92100, Boulogne-Billancourt",

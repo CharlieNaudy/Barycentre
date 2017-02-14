@@ -4,14 +4,14 @@ class UsersController < ApplicationController
 
   # POST /users/login
   def login
-    if User.find_by(login: params[:email])
-      @user = User.find_by(login: params[:email])
+    if User.find_by(email: params[:email])
+      @user = User.find_by(email: params[:email])
       if params[:password] == @user.password
         render json: {:token => @user.fetch_token!}
       else
         render json: {:error => "Invalid password"}
       end
-    else render json: [:error => "Incorrect login"]
+    else render json: {:error => "Incorrect login"}
     end
   end
 
@@ -60,6 +60,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:login, :password, :firstName, :lastName, :address, :latitude, :longitude)
+      params.require(:user).permit(:email, :password, :firstName, :lastName, :address, :latitude, :longitude)
     end
 end
