@@ -32,7 +32,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render json: {:token => @user.fetch_token!}
+      render json: {:token => @user.fetch_token!, :userId => @user.id}
     else
       render json: {:error => "Serveur indisponible"}
     end
