@@ -29,7 +29,11 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    if User.find_by(params[:email])
+      render json: {:error => "Abort mission"}
+    else
+      @user = User.new(user_params)
+    end
 
     if @user.save
       render json: {:token => @user.fetch_token!, :userId => @user.id}
