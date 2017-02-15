@@ -29,16 +29,15 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    if User.find_by(params[:email])
-      render json: {:error => "Abort mission"}
+    if User.find_by(email: params[:email])
+      render json: {:error => "This email address already exists. Please choose another one."}
     else
       @user = User.new(user_params)
-    end
-
-    if @user.save
-      render json: {:token => @user.fetch_token!, :userId => @user.id}
-    else
-      render json: {:error => "Serveur indisponible"}
+      if @user.save
+        render json: {:token => @user.fetch_token!, :userId => @user.id}
+      else
+        render json: {:error => "Serveur indisponible"}
+      end
     end
   end
 
