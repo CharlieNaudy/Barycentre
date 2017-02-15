@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     if User.find_by(email: params[:email])
       @user = User.find_by(email: params[:email])
       if params[:password] == @user.password
-        render json: {:token => @user.fetch_token!}
+        render json: {:token => @user.fetch_token!, :userId => @user.id}
       else
         render json: {:error => "Invalid password"}
       end
