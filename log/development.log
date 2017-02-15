@@ -2464,3 +2464,75 @@ Migrating to CreateFriends (20170213205243)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "friends" ("name", "address", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Aymon"], ["address", "60 Rue du Chemin Vert, 92100"], ["user_id", 1], ["created_at", 2017-02-14 18:00:07 UTC], ["updated_at", 2017-02-14 18:00:07 UTC]]
   [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/users/login" for 127.0.0.1 at 2017-02-14 19:07:34 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"email"=>"Baryonaute", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "aoOodePaUE3yxFBy5fpTNi1XyXwoNcCuCX2FCpcLfouhe2cBtsPvhrlu5K41ObN0k2k="], ["updated_at", 2017-02-14 18:07:34 UTC], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-14 19:17:35 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"email"=>"Baryonaute", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "k00pgpxCxkzdOW36ussQSxCv/FNyxzhzjR1DKUxl/2qIAam5ZBrdz5KR00psfvFsPMg="], ["updated_at", 2017-02-14 18:17:35 UTC], ["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-14 19:18:52 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"email"=>"Baryonaute", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "AmUZJcXH9oIrVo4rUwYz0vJsA8+y4fqxgB+PVjUAQtlhEIrObKiyrDtySTMWVhwx1Yc="], ["updated_at", 2017-02-14 18:18:52 UTC], ["id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-14 19:30:30 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "user"=>{"email"=>"Baryonaute"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-14 19:30:51 +0100
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"email"=>"Baryonaute", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "IJSuVxcDDSvsmYCTHtI3o7KLB6ov9vugVtbc4GT/ZJzNscx07FR03B9q8blLpwSiJJ8="], ["updated_at", 2017-02-14 18:30:51 UTC], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-14 23:49:30 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#login as */*
+  Parameters: {"email"=>"Baryonaute", "password"=>"[FILTERED]", "user"=>{"email"=>"Baryonaute", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Baryonaute"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["token", "3uFme2l/JGVMUL1zF08ROF0iM8eQXyYvdoM+3UotV1AC2ZxC6EgbQLLP3rpd78B6EfI="], ["updated_at", 2017-02-14 22:49:30 UTC], ["id", 1]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 200 OK in 27ms (Views: 0.6ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2017-02-14 23:49:45 +0100
+Processing by UsersController#login as */*
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
