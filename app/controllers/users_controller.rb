@@ -40,7 +40,6 @@ class UsersController < ApplicationController
       end
     end
   end
-  end
 
   # PATCH/PUT /users/1
   def update
@@ -66,4 +65,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:email, :password, :firstName, :lastName, :address, :latitude, :longitude)
     end
-end
+  end
