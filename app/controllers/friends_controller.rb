@@ -17,7 +17,7 @@ class FriendsController < ApplicationController
   # GET /friends/users/1
   def friends_user
     @friends = @user.friends.all
-    render json: @friends
+    render json: {:friends => @friends}
   end
 
 
@@ -47,6 +47,7 @@ class FriendsController < ApplicationController
   # DELETE /friends/1.json
   def destroy
     @friend.destroy
+    render json: {}
   end
 
   private
@@ -62,4 +63,4 @@ class FriendsController < ApplicationController
     def friend_params
       params.require(:friend).permit(:name, :address, :user_id)
     end
-end
+  end
