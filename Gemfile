@@ -11,11 +11,12 @@ gem 'rails', '~> 5.0.1'
 # Add twitter bootstrap
 gem 'twitter-bootstrap-rails'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
 
-/# Use mysql
-gem 'mysql2'
-/
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
