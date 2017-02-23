@@ -1,11 +1,26 @@
+# TODO: @meeting_id multiples (dans get_meetings)
+
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :update, :destroy]
+  #before_action :set_user, only: [:get_meetings]
   #skip_before_action :verify_authenticity_token
 
   # GET /meetings
   def index
     @meetings = Meeting.all
 
+    render json: @meetings
+  end
+
+  # GET /meetings/user/1
+  def get_meetings
+    puts 'dzfdf'
+    @meeting_id = MeetingsMatchingTable.find_by(user_id: params[:id]).meeting_id
+    puts @meeting_id
+    puts 'dfvdfbdfbrgn'
+    @meetings = Meeting.find(@meeting_id)
+    puts 'egefgef'
+    puts @meetings
     render json: @meetings
   end
 
@@ -44,6 +59,11 @@ class MeetingsController < ApplicationController
     def set_meeting
       @meeting = Meeting.find(params[:id])
     end
+
+    def set_user
+      @user = User.find(params[:id])
+    end
+
 
     # Only allow a trusted parameter "white list" through.
     def meeting_params
