@@ -14,14 +14,9 @@ class MeetingsController < ApplicationController
 
   # GET /meetings/user/1
   def get_meetings
-    puts 'dzfdf'
     @meeting_id = MeetingsMatchingTable.find_by(user_id: params[:id]).meeting_id
-    puts @meeting_id
-    puts 'dfvdfbdfbrgn'
     @meetings = Meeting.find(@meeting_id)
-    puts 'egefgef'
-    puts @meetings
-    render json: @meetings
+    render json: {:meetings => @meetings}
   end
 
   # GET /meetings/1
