@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 20170213205243) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "meetings_matching_tables", force: :cascade do |t|
+    t.integer  "meeting_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["meeting_id"], name: "index_meetings_matching_tables_on_meeting_id"
+    t.index ["user_id"], name: "index_meetings_matching_tables_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "password"
@@ -42,15 +51,6 @@ ActiveRecord::Schema.define(version: 20170213205243) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "token"
-  end
-
-  create_table "users_to_meetings", force: :cascade do |t|
-    t.integer  "meeting_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["meeting_id"], name: "index_users_to_meetings_on_meeting_id"
-    t.index ["user_id"], name: "index_users_to_meetings_on_user_id"
   end
 
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :friends
-  resources :users_to_meetings
+  resources :meetings_matching_tables
   resources :meetings
   resources :users
   post "users/login"            => "users#login"
