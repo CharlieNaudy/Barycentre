@@ -1,3 +1,5 @@
+# TODO : matching table friends/meetings
+
 class FriendsController < ApplicationController
   before_action :set_friend, only: [:show, :update, :destroy]
   before_action :set_user, only: [:friends_user]

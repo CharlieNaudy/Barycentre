@@ -15,7 +15,7 @@ class MeetingsController < ApplicationController
   # GET /meetings/user/1
   def get_meetings
     @meeting_id = MeetingsMatchingTable.find_by(user_id: params[:id]).meeting_id
-    @meetings = Meeting.find(@meeting_id)
+    @meetings = [Meeting.find(@meeting_id)]
     render json: {:meetings => @meetings}
   end
 
